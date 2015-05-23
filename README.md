@@ -20,4 +20,9 @@ fecs format的默认快捷键是cmd(ctrl) + shift + h，可自行配置。
 
 如发现问题，欢迎提ISSUE或者加HI联系: xiaoyuze88@gmail.com
 
+## 已知ISSUE
 
+1. 当格式错误过多时，调用fecs format会throw error。
+原因猜测是fecs会在format完后对buffer做一次JSLint的检查，如果JSLint报错过多，会认为可能是fecs format导致的格式错误，从而阻止从buffer覆盖源文件。
+但底层fecs format它throw error后会使得python调起的调用node的子进程挂掉（CalledProcessError），从而导致格式化失败。  
+解决方案： 当格式错误过多时，先修改一部分已知错误后再尝试，如遇格式化失败可以打开Sublime的console（ctrl+`）查看具体错误原因，如报CalledProcessError，基本是如上问题。
