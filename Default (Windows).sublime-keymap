@@ -1,0 +1,22 @@
+[{
+  "keys": ["ctrl+alt+j"],
+  "command": "fecs_helper"
+}, {
+  "keys": ["shift+alt+j", "p"],
+  "command": "fecs_helper_set_linting_prefs"
+}, {
+  "keys": ["shift+alt+j", "o"],
+  "command": "fecs_helper_set_plugin_options"
+}, {
+  "keys": ["shift+alt+j", "k"],
+  "command": "fecs_helper_set_keyboard_shortcuts"
+}, {
+  "keys": ["ctrl+alt+c"],
+  "command": "fecs_helper_clear_annotations"
+}, {
+  "keys": ["shift+alt+j", "n"],
+  "command": "fecs_helper_set_node_path"
+}, {
+  "keys": ["ctrl+shift+h"],
+  "command": "fecs_format"
+}]

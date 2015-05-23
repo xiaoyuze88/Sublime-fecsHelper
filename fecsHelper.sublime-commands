@@ -1,0 +1,19 @@
+[{
+  "caption": "FECS HELPER",
+  "command": "fecs_helper"
+}, {
+  "caption": "FECS HELPER: Set Linting Preferences",
+  "command": "fecs_helper_set_linting_prefs"
+}, {
+  "caption": "FECS HELPER: Set Plugin Options",
+  "command": "fecs_helper_set_plugin_options"
+}, {
+  "caption": "FECS HELPER: Set Keyboard Shortcuts",
+  "command": "fecs_helper_set_keyboard_shortcuts"
+}, {
+  "caption": "FECS HELPER: Set `node` Path",
+  "command": "fecs_helper_set_node_path"
+}, {
+  "caption": "FECS HELPER: Clear Annotations",
+  "command": "fecs_helper_clear_annotations"
+}]
