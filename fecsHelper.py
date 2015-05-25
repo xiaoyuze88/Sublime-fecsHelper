@@ -13,6 +13,7 @@ except ImportError:
 
 REGEXP_OUTPUT = re.compile("^[\s\S]*?line\s*(\d*)(?:\,\s*col\s*(\d*))?\:([\s\S]*)")
 REGEXP_FILENAME = re.compile("^(.*)/([^/]*)$")
+REGEXP_FILENAME_WIN = re.compile("^(.*)\([^\]*)$")
 PLUGIN_FOLDER = os.path.dirname(os.path.realpath(__file__))
 # print(PLUGIN_FOLDER)
 # RC_FILE = ".fecs_helperrc"
@@ -201,7 +202,9 @@ class fecsFormatCommand(sublime_plugin.TextCommand):
 
   # return (path, filename)
   def parse_file_path(self, path):
-    matchs = REGEXP_FILENAME.match(path)
+    matchs = sublime.platform() != "windows" ? 
+      REGEXP_FILENAME.match(path) :
+      REGEXP_FILENAME_WIN.match(path)
     if matchs :
       file_path, file_name = matchs.group(1, 2)
       return {
