@@ -7,6 +7,9 @@
       "caption": "Lint Code",
       "command": "fecs_helper"
     }, {
+      "caption": "Format Code",
+      "command": "fecs_format"
+    }, {
       "caption": "Set Linting Preferences",
       "command": "fecs_helper_set_linting_prefs"
     }, {
@@ -21,33 +24,6 @@
     }, {
       "caption": "Set `node` Path",
       "command": "fecs_helper_set_node_path"
-    }]
-  }]
-}, {
-  "id": "preferences",
-  "children": [{
-    "id": "package-settings",
-    "children": [{
-      "caption": "Fecs Helper",
-      "children": [{
-        "caption": "Lint Code",
-        "command": "fecs_helper"
-      }, {
-        "caption": "Set Linting Preferences",
-        "command": "fecs_helper_set_linting_prefs"
-      }, {
-        "caption": "Set Plugin Options",
-        "command": "fecs_helper_set_plugin_options"
-      }, {
-        "caption": "Set Keyboard Shortcuts",
-        "command": "fecs_helper_set_keyboard_shortcuts"
-      }, {
-        "caption": "Clear Annotations",
-        "command": "fecs_helper_clear_annotations"
-      }, {
-        "caption": "Set `node` Path",
-        "command": "fecs_helper_set_node_path"
-      }]
     }]
   }]
 }]
