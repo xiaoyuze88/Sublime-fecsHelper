@@ -196,7 +196,10 @@ class fecsFormatCommand(sublime_plugin.TextCommand):
     if not path_dic:
       return
     slash = "/" if sublime.platform() != 'windows' else "\\"
-    temp_file_path = PLUGIN_FOLDER + slash + "formatTemp" + slash + path_dic['name']
+    temp_file_pre_path = PLUGIN_FOLDER + slash + "formatTemp" + slash
+    if not os.path.exists(temp_file_pre_path):
+      os.makedirs(temp_file_pre_path)
+    temp_file_path = temp_file_pre_path + path_dic['name']
     f = codecs.open(temp_file_path, mode="w", encoding="utf-8")
     f.write(buffer_text)
     f.close()
